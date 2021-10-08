@@ -1,11 +1,11 @@
-import express, { json } from "express";
-import routes from "./routes";
-import cors from "cors";
+const express = require("express");
+const routes = require("./routes");
+const cors = require("cors");
 
 const app = express();
 
 app.use(cors());
-app.use(json());
+app.use(express.json());
 app.use(routes);
 
 app.listen(process.env.PORT || 3333);
