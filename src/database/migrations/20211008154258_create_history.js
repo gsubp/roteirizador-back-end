@@ -1,7 +1,7 @@
 
 exports.up = function(knex) {
     return knex.schema.createTable("history", function(table) {
-        table.increments("id");
+        table.increments("id").primary();
         table.string("originLat").notNullable();
         table.string("originLng").notNullable();
         table.string("destLat").notNullable();
